@@ -1,16 +1,34 @@
-.hero { 
-    background: #2A254B;
-    width: 1280px;
-    height: 584px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+.hero {
+  background: #2a254b;
+  width: 1280px;
+  height: 584px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
 }
-.text { 
-    margin: 60px;
+.text {
+  margin: 60px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 45px;
+  color: #ffffff;
+  p {
+    margin-top: 230px;
+    font-family: Satoshi;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    width: 602px;
+    height: 81px;
+  }
+}
+.textButton {
+  margin-right: 187px;
+  h1 {
     font-weight: 400;
     font-size: 32px;
     line-height: 45px;
+
     color:#FFFFFF;
     p { 
         margin-top: 230px;
@@ -33,5 +51,10 @@
         height: 90px;
     }
 
-}
+=======
+    font-family: Satoshi;
+    width: 400px;
+    height: 90px;
+  }
 
+}

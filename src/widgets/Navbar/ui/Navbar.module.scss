@@ -3,19 +3,32 @@
   height: 80px;
   background: #ffffff;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 25px 0;
   font-family: Satoshi;
-  justify-content: space-between;
-  .navigation {
-    display: flex;
-    gap: 44px;
-    .link {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 21.6px;
+  position: relative;
 
-      color: #726e8d;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    opacity: 10%;
+    bottom: 20px;
+  }
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bottomContent {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    display: flex;
+    gap: 16px;
   }
 }

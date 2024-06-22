@@ -7,13 +7,13 @@ export const Hero = () => {
       <div className={styles.hero}>
         <div className={styles.text}>
           <div className={styles.textButton}>
-            <h1>
+            <h1 className={styles.h}>
               The furniture brand for the <br></br>future, with timeless designs
             </h1>
             <Button />
           </div>
 
-          <p>
+          <p className={styles.p}>
             A new era in eco friendly furniture with Avelon, the French luxury retail brand with
             nice fonts, tasteful colors and a beautiful way to display things digitally using modern
             web technologies.

@@ -1,0 +1,9 @@
+@import 'variables/vars.scss';
+@import 'reset.scss';
+@import 'global.scss';
+@import 'fonts/fonts.scss';
+
+.app {
+  min-height: 100vh;
+  font: $fontMain;
+}

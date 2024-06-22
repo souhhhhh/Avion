@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './Navigation.module.scss';
 import classNames from 'classnames';
 import { AppLink } from '../../../shared/AppLink';
-AppLink;
+
 interface NavigationProps {
   className?: string;
 }
+
 export enum AppLinkPaths {
   PLANT_POTS = 'plant-pots',
   CERAMICS = 'ceramics',

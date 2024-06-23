@@ -1,0 +1,17 @@
+.NewProducts {
+  .title {
+    font-family: ClashDisplay;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 160px;
+    margin-bottom: 33px;
+  }
+  .items {
+    display: flex;
+    gap: 20px;
+  }
+  .block {
+    width: 25%;
+  }
+}

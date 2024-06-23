@@ -1,15 +1,30 @@
-button { 
-    margin-top: 30px;
-    width: 150px;
-    height: 50px;
-    background: #F9F9F926;
-    color: #FFFFFF;
-    font-family: Satoshi;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    transition: all .5s ease-out;
-    &:hover { 
-        background: #f9f9f94d;
-    }
+.Button {
+  padding: 16px 32px;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+}
+.grey {
+  background: #f9f9f926;
+  color: #ffffff;
+  transition: all 0.5s ease-out;
+  &:hover {
+    background: #f9f9f94d;
+  }
+}
+.white {
+  background: #f9f9f9;
+  color: #2a254b;
+  transition: all 0.5s ease-out;
+  &:hover {
+    background: #bebebe;
+  }
+}
+.purple {
+  background: #2a254b;
+  color: #ffffff;
+  transition: all 0.5s ease-out;
+  &:hover {
+    background: #413974;
+  }
 }

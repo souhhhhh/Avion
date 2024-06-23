@@ -1,4 +1,5 @@
 import { Button } from '../../../shared/Button';
+import { ButtonTheme } from '../../../shared/Button/ui/Button';
 import chair from '../assets/Right Image.png';
 import styles from './Hero.module.scss';
 export const Hero = () => {
@@ -10,7 +11,9 @@ export const Hero = () => {
             <h1 className={styles.h}>
               The furniture brand for the <br></br>future, with timeless designs
             </h1>
-            <Button />
+            <div className={styles.button}>
+              <Button theme={ButtonTheme.GREY}>View collection</Button>
+            </div>
           </div>
 
           <p className={styles.p}>

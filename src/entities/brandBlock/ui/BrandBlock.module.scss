@@ -1,0 +1,25 @@
+.BrandBlock { 
+    width: 300px;
+    height: 124px;
+    .text { 
+        h1 { 
+            font-family: ClashDisplay;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #2A254B;
+            margin-top: 16px;
+            width: 199px;
+            height: 28px;
+        }
+        p { 
+            font-family: Satoshi;
+            font-weight: 400;
+            size: 16px;
+            line-height: 24px;
+            margin-top: 8px;
+            width: 275px;
+        }
+    }
+}
+

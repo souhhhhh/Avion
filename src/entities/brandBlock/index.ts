@@ -1,0 +1,1 @@
+export { BrandBlock } from "./ui/BrandBlock";

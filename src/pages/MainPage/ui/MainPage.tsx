@@ -11,6 +11,7 @@ export const MainPage = ({ className }: MainPageProps) => {
   return (
     <div className={classNames(styles.MainPage)}>
       <Hero />
+      l
       <Anamy />
     </div>
   );

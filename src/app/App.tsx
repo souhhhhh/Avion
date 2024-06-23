@@ -5,11 +5,10 @@ import './styles/index.scss';
 function App() {
   return (
     <div className="app">
-      <div className="container">
-        <header>
-          <Navbar />
-        </header>
-      </div>
+      <header>
+        <Navbar />
+      </header>
+
       <main className="main-content">
         <AppRouter />
       </main>

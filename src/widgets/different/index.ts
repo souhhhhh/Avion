@@ -1,1 +1,1 @@
-export { Anamy } from "./ui/Anamy";
+export { Brand } from './ui/Brand';

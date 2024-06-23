@@ -1,0 +1,1 @@
+export { Anamy } from "./ui/Anamy";

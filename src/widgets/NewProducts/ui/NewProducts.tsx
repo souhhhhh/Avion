@@ -3,6 +3,8 @@ import styles from './NewProducts.module.scss';
 import classNames from 'classnames';
 import { NewProductsCard } from '../../../entities/NewProductsCard';
 import productImg from '../assets/Parent.jpg';
+import { Button } from '../../../shared/Button';
+import { ButtonTheme } from '../../../shared/Button/ui/Button';
 interface NewProductsProps {
   className?: string;
 }
@@ -24,6 +26,9 @@ export const NewProducts = ({ className }: NewProductsProps) => {
           <div className={styles.block}>
             <NewProductsCard price={250} title="The Dandy chair" img={productImg} />
           </div>
+        </div>
+        <div className={styles.button}>
+          <Button theme={ButtonTheme.WHITE}>View collection</Button>
         </div>
       </div>
     </div>

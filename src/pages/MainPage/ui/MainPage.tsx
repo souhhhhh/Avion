@@ -4,6 +4,7 @@ import { Hero } from '../../../widgets/Hero';
 
 import { NewProducts } from '../../../widgets/NewProducts';
 import { Brand } from '../../../widgets/Brand';
+import { Join } from '../../../widgets/join';
 
 interface MainPageProps {
   className?: string;
@@ -15,6 +16,7 @@ export const MainPage = ({ className }: MainPageProps) => {
       <Hero />
       <Brand />
       <NewProducts />
+      <Join />
     </div>
   );
 };

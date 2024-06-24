@@ -1,0 +1,50 @@
+.body { 
+    background-color: #F9F9F9;
+    width: 1284px;
+    height: 481px;    
+    margin-top: 50px;
+}
+.s { 
+    padding-top: 20px;
+}
+.join { 
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    height: 364px;
+    background: #fff;
+    margin: 40px;
+    .text { 
+        width: 571px;
+        height: 114px;
+        margin-top: 70px;
+        margin-left: 35px;
+        h1 { 
+            font-family:ClashDisplay;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2A254B;
+            }
+        p { 
+            width: 470px;
+            height: 48px;
+            font-family: Satoshi;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: #2A254B;
+            text-align: center;
+            margin-left: 40px;
+            margin-top: 16px;
+            }
+        }
+        .input { 
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+    }

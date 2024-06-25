@@ -1,4 +1,4 @@
-import { Icon } from '../../../shared/Icon';
+import { Icon } from '../../../shared/ui/Icon';
 import icon from '../assets/Delivery.svg';
 import styles from './BrandBlock.module.scss';
 export const BrandBlock = () => {

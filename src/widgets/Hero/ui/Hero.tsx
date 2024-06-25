@@ -1,5 +1,5 @@
-import { Button } from '../../../shared/Button';
-import { ButtonTheme } from '../../../shared/Button/ui/Button';
+import { Button } from '../../../shared/ui/Button';
+import { ButtonTheme } from '../../../shared/ui/Button/ui/Button';
 import chair from '../assets/Right Image.png';
 import styles from './Hero.module.scss';
 export const Hero = () => {

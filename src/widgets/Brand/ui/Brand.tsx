@@ -1,6 +1,6 @@
 import styles from './Brand.module.scss';
 import classNames from 'classnames';
-import { BrandBlock } from '../../../entities/brandBlock';
+import { BrandBlock } from '../../../entities/BrandBlock';
 interface DifferentProps {
   className?: string;
 }

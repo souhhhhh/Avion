@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/Avion.svg';
 import { Link } from 'react-router-dom';
-import { RoutePaths } from '../../config/routeConfig/routeConfig';
+import { RoutePaths } from '../../../config/routeConfig/routeConfig';
 
 interface LogoProps {
   link?: boolean;

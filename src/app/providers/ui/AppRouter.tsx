@@ -1,10 +1,9 @@
 import { routeConfig } from '../../../shared/config/routeConfig/routeConfig';
 import { Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
-interface AppRouterProps {
-  className?: string;
-}
-export const AppRouter = ({ className }: AppRouterProps) => {
+import { Loader } from '../../../shared/ui/Loader';
+
+export const AppRouter = () => {
   return (
     <div>
       <Routes>
@@ -12,7 +11,7 @@ export const AppRouter = ({ className }: AppRouterProps) => {
           <Route
             key={path}
             path={path}
-            element={<Suspense fallback="Loading...">{element}</Suspense>}
+            element={<Suspense fallback={<Loader />}>{element}</Suspense>}
           />
         ))}
       </Routes>

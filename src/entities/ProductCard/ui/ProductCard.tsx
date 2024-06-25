@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from './NewProductsCard.module.scss';
+import styles from './ProductCard.module.scss';
 import classNames from 'classnames';
-interface NewProductsProps {
+interface ProductCardProps {
   img: string;
   title: string;
   price: number;
 }
-export const NewProductsCard = ({ img, title, price }: NewProductsProps) => {
+export const ProductCard = ({ img, title, price }: ProductCardProps) => {
   return (
-    <div className={classNames(styles.NewProductsCard)}>
+    <div className={classNames(styles.ProductCard)}>
       <div className={styles.img}>
         <img src={img} alt="" />
       </div>

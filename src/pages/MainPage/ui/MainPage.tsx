@@ -4,7 +4,7 @@ import { Hero } from '../../../widgets/Hero';
 
 import { NewProducts } from '../../../widgets/NewProducts';
 import { Brand } from '../../../widgets/Brand';
-import { Join } from '../../../widgets/join';
+import { Join } from '../../../widgets/Join';
 
 interface MainPageProps {
   className?: string;

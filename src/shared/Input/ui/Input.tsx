@@ -20,10 +20,6 @@ export const Input = () => {
         reset()
         
     }
-    const Time = () => { 
-        return <span>Приглашение отправлено</span>
-        reset()
-    }
     return ( 
         <div className={styles.InputBUtton}>
 

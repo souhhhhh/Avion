@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Button } from '../../Button'
 import { ButtonTheme } from '../../Button/ui/Button'
 import styles from './Input.module.scss'
@@ -18,8 +17,16 @@ export const Input = () => {
     // }
     const onSubmit = () => { 
         reset()
-        
     }
+
+        function Time () { 
+            setTimeout(() => { 
+                reset()
+            }, 2000)
+            return <span>Приглашение отправлено</span>
+        }
+
+
     return ( 
         <div className={styles.InputBUtton}>
 
@@ -52,7 +59,7 @@ export const Input = () => {
                 </div>
                 </label>
                     <div className={styles.success}>
-                       { isSubmitSuccessful === true ? <span>Приглашение отправлено</span> : null}
+                       { isSubmitSuccessful === true ? Time() : null}
                     </div>
                 <div className={errors.email && styles.error}>
                     {errors?.email && <span>{errors?.email?.message}</span>}

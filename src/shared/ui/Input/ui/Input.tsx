@@ -1,8 +1,7 @@
-import { ChangeEvent, useState } from 'react';
 import { Button } from '../../Button';
 import { ButtonTheme } from '../../Button/ui/Button';
 import styles from './Input.module.scss';
-import { SubmitErrorHandler, SubmitHandler, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 interface InputProps {
   width?: number;
   height?: number;

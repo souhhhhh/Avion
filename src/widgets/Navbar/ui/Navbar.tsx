@@ -7,11 +7,7 @@ import userIcon from '../assets/Useravatar.svg';
 import { Icon } from '../../../shared/ui/Icon';
 import { Logo } from '../../../shared/ui/Logo';
 
-interface NavbarProps {
-  className?: string;
-}
-
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = () => {
   return (
     <header>
       <div className={classNames(styles.Navbar)}>

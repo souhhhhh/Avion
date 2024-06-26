@@ -1,5 +1,5 @@
 import { Input } from '../../../shared/ui/Input';
-import styles from './Join.module.scss';
+import styles from './join.module.scss';
 export const Join = () => {
   return (
     <div className={styles.body}>

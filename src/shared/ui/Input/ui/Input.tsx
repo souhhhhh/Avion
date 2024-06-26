@@ -11,61 +11,70 @@ interface InputProps {
 interface Input {
   email: string;
 }
+
 export const Input = (props: InputProps) => {
   const { width, height, placeholder } = props;
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<Input>({});
 
-  const submit: SubmitHandler<Input> = (data) => {
-    console.log(data);
+  // const ClickClearInput = () => {
+  //     setInput('')
+  // }
+  const onSubmit = () => {
+    reset();
   };
 
-  const error: SubmitErrorHandler<Input> = (data) => {
-    console.log(data);
-  };
+  function Time() {
+    setTimeout(() => {
+      reset();
+    }, 2000);
+    return <span>Приглашение отправлено</span>;
+  }
 
-  const [input, setInput] = useState('');
-
-  const ChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setInput(event.target.value);
-  };
-
-  const ClickClearInput = () => {
-    setInput('');
-  };
   return (
     <div className={styles.InputBUtton}>
-      <form onSubmit={handleSubmit(submit, error)}>
-        <input
-          {...register('email', {
-            required: true,
-            minLength: {
-              value: 5,
-              message: 'Не меньше 10 символов',
-            },
-            pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-            maxLength: {
-              value: 126,
-              message: 'Не более 126 символов',
-            },
-          })}
-          style={{ width: `${width}px`, height: `${height}px` }}
-          value={input}
-          onChange={ChangeInput}
-          className={styles.input}
-          type="email"
-          placeholder={placeholder}
-        />
-        <div>{errors?.email && <p>{errors?.email?.message || `${error.name}`}</p>}</div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label className={styles.label} htmlFor="">
+          <input
+            {...register('email', {
+              required: true,
+              minLength: {
+                value: 5,
+                message: 'Почта должна содержать не менее 5 символов',
+              },
+              pattern: {
+                value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                message: `Введите корректную почту,  
+                            например: yourName@mail.ru`,
+              },
+              maxLength: {
+                value: 126,
+                message: 'Почта должна содержать не более 126 символов',
+              },
+            })}
+            style={{ width: `${width}px`, height: `${height}px` }}
+            type="email"
+            className={styles.input}
+            placeholder={placeholder}
+          />
+
+          <div className={styles.button}>
+            <span onSubmit={handleSubmit(onSubmit)}>
+              <Button theme={ButtonTheme.PURPLE}>Sign up</Button>
+            </span>
+          </div>
+        </label>
+        <div className={styles.success}>{isSubmitSuccessful === true ? Time() : null}</div>
+        <div className={errors.email && styles.error}>
+          {errors?.email && <span>{errors?.email?.message}</span>}
+        </div>
+
+        <div></div>
       </form>
-      <div className={styles.button}>
-        <span onClick={ClickClearInput}>
-          <Button theme={ButtonTheme.PURPLE}>Sign up</Button>
-        </span>
-      </div>
     </div>
   );
 };

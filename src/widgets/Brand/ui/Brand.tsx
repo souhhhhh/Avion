@@ -1,6 +1,6 @@
 import styles from './Brand.module.scss';
 import classNames from 'classnames';
-import { BrandBlock } from '../../../entities/BrandBlock';
+import { BrandBlock } from '../../../entities/brandBlock';
 
 export const Brand = () => {
   return (

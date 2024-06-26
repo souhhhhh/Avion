@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Hero } from '../../../widgets/Hero';
 import productImg from '../../../widgets/ProductList/assets/Parent.jpg';
 import { Brand } from '../../../widgets/Brand';
-import { Join } from '../../../widgets/Join';
+import { Join } from '../../../widgets/join';
 import { ProductList } from '../../../widgets/ProductList';
 
 interface MainPageProps {

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Search.module.scss';
 import classNames from 'classnames';
-import { Icon } from '../../../shared/Icon';
 import search from '../assets/Search.svg';
+import { Icon } from '../../../shared/ui/Icon';
 interface SearchProps {
   className?: string;
 }

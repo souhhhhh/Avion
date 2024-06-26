@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Navigation.module.scss';
 import classNames from 'classnames';
-import { AppLink } from '../../../shared/AppLink';
+import { AppLink } from '../../../shared/ui/AppLink';
 
 interface NavigationProps {
   className?: string;

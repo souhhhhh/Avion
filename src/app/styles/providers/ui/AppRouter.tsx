@@ -1,10 +1,8 @@
-import { routeConfig } from '../../../shared/config/routeConfig/routeConfig';
 import { Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
-interface AppRouterProps {
-  className?: string;
-}
-export const AppRouter = ({ className }: AppRouterProps) => {
+import { routeConfig } from '../../../../shared/config/routeConfig/routeConfig';
+
+export const AppRouter = () => {
   return (
     <div>
       <Routes>

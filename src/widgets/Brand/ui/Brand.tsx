@@ -1,10 +1,8 @@
 import styles from './Brand.module.scss';
 import classNames from 'classnames';
-import { BrandBlock } from '../../../entities/brandBlock';
-interface DifferentProps {
-  className?: string;
-}
-export const Brand = ({ className }: DifferentProps) => {
+import { BrandBlock } from '../../../entities/BrandBlock';
+
+export const Brand = () => {
   return (
     <div className="container">
       <div className={classNames(styles.Different)}>

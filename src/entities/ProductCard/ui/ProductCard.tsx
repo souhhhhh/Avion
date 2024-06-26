@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProductCard.module.scss';
 import classNames from 'classnames';
-interface ProductCardProps {
+export interface ProductCardProps {
   img: string;
   title: string;
   price: number;

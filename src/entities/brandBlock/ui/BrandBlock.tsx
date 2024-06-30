@@ -1,7 +1,7 @@
 import { Icon } from '../../../shared/ui/Icon';
 import icon from '../assets/Delivery.svg';
 import styles from './BrandBlock.module.scss';
-export const BrandBlock = () => {
+const BrandBlock = () => {
   return (
     <div className={styles.BrandBlock}>
       <Icon svg={icon} />
@@ -12,3 +12,4 @@ export const BrandBlock = () => {
     </div>
   );
 };
+export default BrandBlock

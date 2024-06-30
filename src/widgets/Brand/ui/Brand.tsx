@@ -1,6 +1,7 @@
-import { BrandBlock } from '../../../entities/BrandBlock';
+import BrandBlock from '../../../entities/brandBlock/ui/BrandBlock';
 import styles from './Brand.module.scss';
 import classNames from 'classnames';
+
 
 export const Brand = () => {
   return (

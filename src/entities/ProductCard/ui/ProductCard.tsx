@@ -12,7 +12,6 @@ export interface ProductCardProps {
 
 export const ProductCard = ({ img, title, price, id }: ProductCardProps) => {
   const navigate = useNavigate();
-  console.log(navigate);
   return (
     <div onClick={() => navigate(`products/${id}`)} className={classNames(styles.ProductCard)}>
       <div className={styles.img}>

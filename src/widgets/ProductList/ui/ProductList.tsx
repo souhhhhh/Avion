@@ -2,7 +2,6 @@ import styles from './ProductList.module.scss';
 import classNames from 'classnames';
 import { ProductCard } from '../../../entities/ProductCard';
 import { Button, ButtonTheme } from '../../../shared/ui/Button/ui/Button';
-
 import { testData } from '../../../app/data/data';
 
 interface ProductListProps {
@@ -15,9 +14,9 @@ export const ProductList = ({ className, title }: ProductListProps) => {
     <div className="container">
       <div className={classNames(styles.ProductList)}>
         <div className={styles.title}>{title}</div>
-        <div className={styles.items}>
+        <div className={styles.items} >
           {testData.map((items) => (
-            <div className={styles.block}>
+            <div className={styles.block} key={items.id}>
               <ProductCard {...items} />
             </div>
           ))}

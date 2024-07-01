@@ -9,6 +9,6 @@ interface ProductPageProps {
 
 export const ProductPage = ({ className }: ProductPageProps) => {
   const params = useParams();
-  const items: ProductCardProps[] = testData.filter((item) => item.id === params.id);
-  return <div className={classNames(styles.ProductPage)}>{items.map((item) => item.price)}</div>;
+  const items = 
+  return <div className={classNames(styles.ProductPage)}></div>;
 };

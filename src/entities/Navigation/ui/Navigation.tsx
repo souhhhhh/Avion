@@ -27,6 +27,7 @@ export const Navigation = ({ className }: NavigationProps) => {
     { name: 'Tableware', path: AppLinkPaths.TABLEWARE },
     { name: 'Cutlery', path: AppLinkPaths.CUTLERY },
   ];
+  
   return (
     <nav className={styles.navigation}>
       {list.map((el) => (

@@ -1,8 +1,7 @@
-import React from 'react';
 import styles from './ProductCard.module.scss';
 import classNames from 'classnames';
-import { AppLink } from '../../../shared/ui/AppLink';
-import { useNavigate, useNavigation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 export interface ProductCardProps {
   img: string;
   title: string;
@@ -11,15 +10,15 @@ export interface ProductCardProps {
 }
 
 export const ProductCard = ({ img, title, price, id }: ProductCardProps) => {
-  const navigate = useNavigate();
   return (
-    <div onClick={() => navigate(`products/${id}`)} className={classNames(styles.ProductCard)}>
+    <Link to={`/product/${id}`} className={classNames(styles.ProductCard)}>
       <div className={styles.img}>
         <img src={img} alt="" />
       </div>
 
       <div className={styles.title}>{title}</div>
       <div className={styles.price}>£{price}</div>
-    </div>
+    </Link>
   );
 };
+// https://i.ibb.co/smMPgdX/Large.png

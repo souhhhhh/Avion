@@ -8,6 +8,7 @@ export enum ButtonTheme {
   GREY = 'grey',
   PURPLE = 'purple',
   WHITE = 'white',
+  TransitionGray = 'transitionGray'
 }
 interface ButtonProps {
   theme: ButtonTheme;

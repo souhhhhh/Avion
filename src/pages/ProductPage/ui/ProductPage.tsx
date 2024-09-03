@@ -1,14 +1,16 @@
 import styles from './ProductPage.module.scss';
 import classNames from 'classnames';
-import { useParams } from 'react-router-dom';
-import { testData } from '../../../app/data/data';
-import { ProductCardProps } from '../../../entities/ProductCard/ui/ProductCard';
-interface ProductPageProps {
-  className?: string;
-}
+import { FullItemData } from '../../../entities/FullItemData';
+import { ProductList } from '../../../widgets/ProductList';
+import { Join } from '../../../widgets/join';
 
-export const ProductPage = ({ className }: ProductPageProps) => {
-  const params = useParams();
-  const items = 
-  return <div className={classNames(styles.ProductPage)}></div>;
+export const ProductPage = () => {
+
+  return (
+  <div className={classNames(styles.ProductPage)}>
+      <FullItemData />
+      <ProductList title='You might also like' />
+      <Join />
+  </div>)
+  ;
 };

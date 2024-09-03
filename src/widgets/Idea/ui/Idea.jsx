@@ -1,7 +1,7 @@
 import img from '../assets/Furniture.png';
 import styles from './Idea.module.scss';
-import { Button } from '../../../shared/ui/Button/ui/Button'
-const Idea = () => { 
+import { Button, ButtonTheme } from '../../../shared/ui/Button/ui/Button'
+export const Idea = () => { 
     return ( 
             <div className={styles.block}>
             <div className={styles.text}>
@@ -9,7 +9,7 @@ const Idea = () => {
                 <h1>When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.</h1>
                 <h2>Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.</h2>
                 <span className={styles.button}>
-                    <Button>Get in touch</Button>
+                    <Button theme={ButtonTheme.TransitionGray}>Get in touch</Button>
                 </span>
             </div>
             <img src={img} alt="" />
@@ -17,5 +17,5 @@ const Idea = () => {
     )
 };
 
-export default Idea;
+
 

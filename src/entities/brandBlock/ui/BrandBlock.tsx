@@ -1,13 +1,14 @@
-import { Icon } from '../../../shared/ui/Icon';
-import icon from '../assets/Delivery.svg';
+import { IDifferentBrand } from '../../../shared/lib/types/data';
 import styles from './BrandBlock.module.scss';
-const BrandBlock = () => {
+const BrandBlock = ({differentName, differentValue, img}: IDifferentBrand<string>) => {
   return (
     <div className={styles.BrandBlock}>
-      <Icon svg={icon} />
       <div className={styles.text}>
-        <h1>Next day as standard</h1>
-        <p>Order before 3pm and get your order the next day as standard</p>
+        <img src={img} alt="" />
+        <div>
+          <p>{differentName}</p>
+          <p>{differentValue}</p>
+        </div>
       </div>
     </div>
   );

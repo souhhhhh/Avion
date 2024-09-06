@@ -4,20 +4,18 @@ import { Hero } from '../../../widgets/Hero';
 import { Brand } from '../../../widgets/Brand';
 import { Join } from '../../../widgets/join';
 
-import { ProductList } from '../../../widgets/ProductList';
 import { Idea } from '../../../widgets/Idea';
+import { SortProduct } from '../../../widgets/SortProduct';
+import { TypeProductsEnum } from '../../../widgets/SortProduct/ui/SortProduct';
 
-interface MainPageProps {
-	className?: string;
-}
 
-export const MainPage = ({ className }: MainPageProps) => {
+export const MainPage = () => {
 	return (
 		<div className={classNames(styles.MainPage)}>
 			<Hero />
 			<Brand />
-			<ProductList title='New ceramics' />
-			<ProductList title='Our popular products' />
+			<SortProduct title='New ceramics' typeProducts={TypeProductsEnum.NEW_CERAMICS} />
+			<SortProduct title='Our popular products' typeProducts={TypeProductsEnum.All_CERAMICS_PRODUCTS} />
 			<Join />
 			<Idea />
 		</div>

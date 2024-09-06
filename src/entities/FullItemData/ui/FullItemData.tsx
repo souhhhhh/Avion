@@ -11,10 +11,10 @@ export const FullItemData = () => {
     const [fullItemData,setFullItemData] = useState<IProduct | null>()
 
     useEffect(() => { 
-      const getData = async () => {
-        const response = await axios.get(`http://localhost:3000/AllData/${id}`)
-        setFullItemData(response.data)
-      }
+        const getData = async () => {
+          const response = await axios.get(`http://localhost:3000/AllData/${id}`)
+          setFullItemData(response.data)
+        }
       getData()
     }, [])
 
@@ -63,7 +63,6 @@ export const FullItemData = () => {
                                     <p className="text-purple-light">Depth</p>
                                     <p className="text-blue-light mt-5">{item.Depth}cm</p>
                                 </div>
-
                             </div>
                         </div>
                        )) 

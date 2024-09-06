@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '../../Button';
 import { ButtonTheme } from '../../Button/ui/Button';
 import styles from './Input.module.scss';
@@ -13,6 +14,7 @@ interface Input {
 
 export const Input = (props: InputProps) => {
   const { width, height, placeholder } = props;
+  const [disabled,setDesabled] = useState(false)
   const {
     register,
     handleSubmit,
@@ -20,17 +22,15 @@ export const Input = (props: InputProps) => {
     formState: { errors, isSubmitSuccessful },
   } = useForm<Input>({});
 
-  // const ClickClearInput = () => {
-  //     setInput('')
-  // }
   const onSubmit = () => {
     reset();
   };
 
   function Time() {
     setTimeout(() => {
-      reset();
-    }, 2000);
+      // reset();
+      setDesabled(true)
+    }, 0);
     return <span>Приглашение отправлено</span>;
   }
 
@@ -41,12 +41,13 @@ export const Input = (props: InputProps) => {
           <input
             {...register('email', {
               required: true,
+              disabled: disabled,
               minLength: {
                 value: 5,
                 message: 'Почта должна содержать не менее 5 символов',
               },
               pattern: {
-                value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                value:  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                 message: `Введите корректную почту,  
                             например: yourName@mail.ru`,
               },

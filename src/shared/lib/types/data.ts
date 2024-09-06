@@ -20,3 +20,11 @@ export interface Dimensions {
     Width: string
     Depth: string
 }
+
+
+export interface IDifferentBrand<T> { 
+    id: T
+    differentName: T
+    differentValue: T
+    img: T
+}

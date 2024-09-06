@@ -1,0 +1,1 @@
+export { MainProducts } from "./ui/MapProducts";

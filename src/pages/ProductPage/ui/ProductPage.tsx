@@ -1,15 +1,16 @@
 import styles from './ProductPage.module.scss';
 import classNames from 'classnames';
 import { FullItemData } from '../../../entities/FullItemData';
-import { ProductList } from '../../../widgets/ProductList';
 import { Join } from '../../../widgets/join';
+import { SortProduct } from '../../../widgets/SortProduct';
+import { TypeProductsEnum } from '../../../widgets/SortProduct/ui/SortProduct';
 
 export const ProductPage = () => {
 
   return (
   <div className={classNames(styles.ProductPage)}>
       <FullItemData />
-      <ProductList title='You might also like' />
+      <SortProduct title='You might also like' typeProducts={TypeProductsEnum.NEW_CERAMICS} />
       <Join />
   </div>)
   ;

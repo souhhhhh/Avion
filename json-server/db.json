@@ -12,7 +12,8 @@
         "img": "https://i.ibb.co/bWqV3tC/Photo.png",
         "bigImg": "https://i.ibb.co/6bWk6gm/Image-Left.png",
         "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.",
-        
+        "material": "ceramics",
+        "releaseData": false,
         "plus": [{ 
           "material": "Premium material",
           "handmadeUpholstery": "Handmade upholstery",
@@ -33,6 +34,8 @@
         "id": "2",
         "img": "https://i.ibb.co/vHb6TfX/Photo-1.png",
         "description": "A stunning handcrafted vase with a sleek and modern design. Made from high-quality materials, this vase is perfect for adding a touch of elegance to any room.",
+        "material": "ceramics",
+        "releaseData": false,
         "plus": [
             {
             "material": "Premium glass",
@@ -54,6 +57,8 @@
         "id": "3",
         "img": "https://i.ibb.co/MsrKMJs/Photo-2.png",
         "description": "A simple yet elegant candle holder, perfect for creating a cozy ambiance in any space. Crafted from high-quality materials, this piece is designed to last.",
+        "material": "ceramics",
+        "releaseData": false,
         "plus": [
               {
               "material": "Solid oak wood",
@@ -76,6 +81,8 @@
         "id": "4",
         "img": "https://i.ibb.co/G5NF2Fk/Photo-3.png",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
+        "material": "ceramics",
+        "releaseData": false,
         "plus": [
               {
               "material": "High-quality ceramic",
@@ -97,6 +104,8 @@
         "id": "5",
         "img": "https://i.ibb.co/TPvDGMb/Photo-4.png",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
+        "material": "tree",
+        "releaseData": true,
         "plus": [
               {
               "material": "High-quality ceramic",
@@ -119,6 +128,8 @@
         "id": "6",
         "img": "https://i.ibb.co/37DScnC/Photo-5.png",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
+        "material": "tree",
+        "releaseData": true,
         "plus": [
               {
               "material": "High-quality ceramic",
@@ -141,6 +152,8 @@
         "id": "7",
         "img": "https://i.ibb.co/hVN3HdC/Photo-6.png",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
+        "material": "tree",
+        "releaseData": true,
         "plus": [
               {
               "material": "High-quality ceramic",
@@ -163,6 +176,8 @@
         "id": "8",
         "img": "https://i.ibb.co/prMnG2J/Photo-7.png",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
+        "material": "tree",
+        "releaseData": true,
         "plus": [
               {
               "material": "High-quality ceramic",
@@ -185,6 +200,8 @@
         "id": "9",
         "img": "https://i.ibb.co/NWgLQZj/Photo-8.png",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
+        "material": "window",
+        "releaseData": true,
         "plus": [
               {
               "material": "High-quality ceramic",
@@ -200,94 +217,32 @@
               }
             ]
       }
-
     ],
-    "NewCeramics": [
-      {
-        "price": 250,
-        "title": "The Dandy chair",
+
+    "BrandDifferent" : [
+      { 
         "id": "1",
-        "img": "https://i.ibb.co/bWqV3tC/Photo.png",
-        "bigImg": "https://i.ibb.co/6bWk6gm/Image-Left.png",
-        "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.",
-        
-        "plus": [{ 
-          "material": "Premium material",
-          "handmadeUpholstery": "Handmade upholstery",
-          "conclusion": "Handmade upholstery is a very good material"
-        }],
-
-        "dimensions": [{
-          "Height": "110",
-          "Width": "75",
-          "Depth": "50"
-         }]
-
+        "differentName": "Next day as standard",
+        "differentValue": "Order before 3pm and get your order the next day as standard",
+        "img": "https://i.ibb.co/LSZg558/Delivery-1.png"
       },
-  
-      {
-        "price": 155,
-        "title": "Rustic Vase Set",
+      { 
         "id": "2",
-        "img": "https://i.ibb.co/vHb6TfX/Photo-1.png",
-        "description": "A stunning handcrafted vase with a sleek and modern design. Made from high-quality materials, this vase is perfect for adding a touch of elegance to any room.",
-        "plus": [
-            {
-            "material": "Premium glass",
-            "handmadeUpholstery": "Handmade craftsmanship",
-            "conclusion": "Handmade craftsmanship"
-            }
-          ],
-          "dimensions": [
-            {
-            "Height": "30",
-            "Width": "15",
-            "Depth": "15"
-            }
-          ]
+        "differentName": "Made by true artisans",
+        "differentValue": "Handmade crafted goods made with real passion and craftmanship",
+        "img": "https://i.ibb.co/zfgt80m/Checkmark-outline-1.png"
       },
-      {
-        "price": 125,
-        "title": "The Silky Vase",
+      { 
         "id": "3",
-        "img": "https://i.ibb.co/MsrKMJs/Photo-2.png",
-        "description": "A simple yet elegant candle holder, perfect for creating a cozy ambiance in any space. Crafted from high-quality materials, this piece is designed to last.",
-        "plus": [
-              {
-              "material": "Solid oak wood",
-              "handmadeUpholstery": "Handmade design",
-              "conclusion": "Handmade design"
-              }
-            ],
-            "dimensions": [
-              {
-              "Height": "20",
-              "Width": "10",
-              "Depth": "10"
-              }
-            ]
-
+        "differentName": "Unbeatable prices",
+        "differentValue": "For our materials and quality you won’t find better prices anywhere",
+        "img": "https://i.ibb.co/S7QRLSk/Purchase-1.png"
       },
-      {
-        "price": 399,
-        "title": "The Luce Lamp",
+      { 
         "id": "4",
-        "img": "https://i.ibb.co/G5NF2Fk/Photo-3.png",
-        "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
-        "plus": [
-              {
-              "material": "High-quality ceramic",
-              "handmadeUpholstery": "Handmade craftsmanship",
-              "conclusion": "Handmade craftsmanship "
-              }
-            ],
-            "dimensions": [
-              {
-              "Height": 40,
-              "Width": "20",
-              "Depth": "20"
-              }
-            ]
+        "differentName": "Recycled packaging",
+        "differentValue": "We use 100% recycled packaging to ensure our footprint is manageable",
+        "img": "https://i.ibb.co/d0T7p91/Sprout-1.png"
       }
     ]
   

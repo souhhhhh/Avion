@@ -18,7 +18,6 @@ interface ISortProduct {
 
 export const SortProduct: FC<ISortProduct> = ({ title, typeProducts }) => {
 	const [AllData, setAllData] = useState<IProduct[]>([]);
-
 	useEffect(() => {
 		useGetData(typeProducts, setAllData);
 	  }, [typeProducts]);

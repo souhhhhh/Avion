@@ -13,7 +13,6 @@ interface ProductListProps {
 }
 
 export const ProductList = ({ title, typeProducts }: ProductListProps) => {
-	
 	return (
 		<div className='container'>
 			<div className={classNames(styles.ProductList)}>

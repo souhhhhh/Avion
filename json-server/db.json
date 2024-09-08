@@ -7,7 +7,7 @@
   "AllData": [
       {
         "price": 250,
-        "title": "The Dandy chair",
+        "title": "Dandy chair",
         "id": "1",
         "img": "https://i.ibb.co/bWqV3tC/Photo.png",
         "bigImg": "https://i.ibb.co/6bWk6gm/Image-Left.png",
@@ -30,9 +30,10 @@
   
       {
         "price": 155,
-        "title": "Rustic Vase Set",
+        "title": "Vase Set",
         "id": "2",
         "img": "https://i.ibb.co/vHb6TfX/Photo-1.png",
+        "bigImg": "https://i.ibb.co/2YLKRyD/still-life-with-plants-deco-1.jpg",
         "description": "A stunning handcrafted vase with a sleek and modern design. Made from high-quality materials, this vase is perfect for adding a touch of elegance to any room.",
         "material": "ceramics",
         "releaseData": false,
@@ -53,9 +54,10 @@
       },
       {
         "price": 125,
-        "title": "The Silky Vase",
+        "title": "Silky Vase",
         "id": "3",
         "img": "https://i.ibb.co/MsrKMJs/Photo-2.png",
+        "bigImg": "https://i.ibb.co/7gSvmnG/front-view-two-vases-1.jpg",
         "description": "A simple yet elegant candle holder, perfect for creating a cozy ambiance in any space. Crafted from high-quality materials, this piece is designed to last.",
         "material": "ceramics",
         "releaseData": false,
@@ -77,9 +79,10 @@
       },
       {
         "price": 399,
-        "title": "The Luce Lamp",
+        "title": "Luce Lamp",
         "id": "4",
         "img": "https://i.ibb.co/G5NF2Fk/Photo-3.png",
+        "bigImg": "https://i.ibb.co/bBFZ6bz/18966059.jpg",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
         "material": "ceramics",
         "releaseData": false,
@@ -100,9 +103,10 @@
       },
       {
         "price": 3700,
-        "title": "The Chair Premium",
+        "title": "Chair fancy",
         "id": "5",
         "img": "https://i.ibb.co/TPvDGMb/Photo-4.png",
+        "bigImg": "https://i.ibb.co/M1WY53r/home-indoor-design-concept-2.jpg",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
         "material": "tree",
         "releaseData": true,
@@ -127,6 +131,7 @@
         "title": "The Stool",
         "id": "6",
         "img": "https://i.ibb.co/37DScnC/Photo-5.png",
+        "bigImg": "https://i.ibb.co/Z1Q8rz5/still-life-minimalist-lifestyle-1.jpg",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
         "material": "tree",
         "releaseData": true,
@@ -151,6 +156,7 @@
         "title": "The Lamps",
         "id": "7",
         "img": "https://i.ibb.co/hVN3HdC/Photo-6.png",
+        "bigImg": "https://i.ibb.co/ZRQhnKY/empty-yellow-room-interior-design-with-ceiling-lamps-1.jpg",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
         "material": "tree",
         "releaseData": true,
@@ -175,6 +181,7 @@
         "title": "The Candle",
         "id": "8",
         "img": "https://i.ibb.co/prMnG2J/Photo-7.png",
+        "bigImg": "https://i.ibb.co/f4dqxJS/arrangement-with-flowers-white-background-1.jpg",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
         "material": "tree",
         "releaseData": true,
@@ -196,9 +203,10 @@
 
       {
         "price": 350,
-        "title": "The Chair x3",
+        "title": "The Chairs",
         "id": "9",
         "img": "https://i.ibb.co/NWgLQZj/Photo-8.png",
+        "bigImg": "https://i.ibb.co/X8XP6N5/four-empty-white-chairs-room-1.jpg",
         "description": "A stunning handcrafted ceramic vase, perfect for adding a touch of natural beauty to any room. Featuring a unique and intricate design, this vase is a true work of art.",
         "material": "window",
         "releaseData": true,

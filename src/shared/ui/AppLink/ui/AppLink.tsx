@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import styles from './AppLink.module.scss';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';

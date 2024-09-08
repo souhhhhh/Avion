@@ -1,4 +1,4 @@
-import { IDifferentBrand } from '../../../shared/lib/types/data';
+import type { IDifferentBrand } from '../../../shared/lib/types/data';
 import styles from './BrandBlock.module.scss';
 const BrandBlock = ({differentName, differentValue, img}: IDifferentBrand<string>) => {
   return (

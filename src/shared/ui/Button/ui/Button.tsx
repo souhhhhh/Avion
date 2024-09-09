@@ -15,8 +15,8 @@ interface ButtonProps {
   children: ReactNode;
   className?: string;
 }
-export const Button = ({ className, children, theme }: ButtonProps) => {
+export const Button = ({ className, children, theme, ...otherProps }: ButtonProps) => {
   return (
-    <button className={classNames(styles.Button, { [styles[theme]]: true })}>{children}</button>
+    <button className={classNames(styles.Button, { [styles[theme]]: true })} {...otherProps}>{children}</button>
   );
 };

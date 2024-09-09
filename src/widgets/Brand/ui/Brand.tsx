@@ -7,7 +7,6 @@ import classNames from 'classnames';
 import { useQuery } from 'react-query';
 import { IDifferentBrand } from '../../../shared/lib/types/data';
 export const Brand: FC = () => {
-	
 	const { data } = useQuery<IDifferentBrand<string>[]>({
 		queryKey: ['different'],
 		queryFn: () => BrandService.getBrandDifferent()
@@ -22,7 +21,9 @@ export const Brand: FC = () => {
 						{data && (
 							<div className='flex gap-10'>
 								{data.length > 0 ? (
-									data.slice(0, 4).map(items => (
+									data
+										.slice(0, 4)
+										.map(items => (
 											<BrandBlock
 												id={items.id}
 												differentName={items.differentName}

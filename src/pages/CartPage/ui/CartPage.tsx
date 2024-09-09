@@ -1,22 +1,27 @@
 import { observer } from 'mobx-react';
+
 import { ProductListTitle } from '../../../widgets/ProductListTitle';
-import { mobxStore } from '../../../store/cartStore/cart-store';
+import { cartStore } from '../../../store/cartStore/cart-store';
+import styles from './CartPage.module.scss'
 
 export const CartPage = observer(() => {
-	const { cartstore } = mobxStore;
+	// cart store also including a special function for remove product from cart.
+	const { cart } = cartStore;
+
 	return (
 		<div className='container'>
-			<div className=''>
+			<div>
 				<div>
 					<ProductListTitle title='Your shopping cart' />
-					<div className='flex justify-between mt-16 font-ClashDisplay font-normal text-sm border-b border-b-[#EBE8F4] '>
-						<p>Product</p>
-						<div className='flex mb-4'>
-							<p className='mr-[384px]'>Quantity</p>
-							<p>Total</p>
-						</div>
+					<ul className={styles.columns}>
+						<li>Product</li>
+						<li>Quantity</li>
+						<li>Total</li>
+					</ul>
+					<div>
+						{/* TODO: display a cart item */}
+						{cart.map(item => <div key={item.id}></div>)}
 					</div>
-					<p></p>
 				</div>
 			</div>
 		</div>

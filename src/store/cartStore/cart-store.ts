@@ -1,27 +1,22 @@
 import { makeAutoObservable } from 'mobx';
+
 import { IProduct } from '../../shared/lib/types/data';
-import { ICartStore } from './cart-store.types';
+import { ICart } from './types';
 
-class MobxStore {
-	constructor() {
-		makeAutoObservable(this);
-	}
+class CartStore {
+	constructor() { makeAutoObservable(this) }
 
-	cartstore = {
-		items: [] as ICartStore[]
+	// ============ STATES ============
+	cart: ICart[] = [];
+
+	// ============ MOVES ============
+	addToCartItems = (product: IProduct) => {
+		const index = this.cart.findIndex(item => item.id === product.id);
+
+		if (index !== -1) this.cart[index].quantity += 1;
+		else this.cart.push({ ...product, quantity: 1 });
 	};
 
-	addToCartItems = (items: IProduct) => {
-		this.cartstore.items.push({
-			...items,
-			items,
-			quantity: 1
-		});
-	};
-	removeItem(itemId: string) {
-		this.cartstore.items = this.cartstore.items.filter(
-			item => item.id !== itemId
-		);
-	}
+	removeProductFromCart = (id: string) => this.cart = this.cart.filter(item => item.id !== id);
 }
-export const mobxStore = new MobxStore();
+export const cartStore = new CartStore();

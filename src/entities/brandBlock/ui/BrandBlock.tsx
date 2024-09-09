@@ -1,7 +1,6 @@
 import type { IDifferentBrand } from '../../../shared/lib/types/data';
 import styles from './BrandBlock.module.scss';
-
-export const BrandBlock = ({differentName, differentValue, img}: IDifferentBrand<string>) => {
+const BrandBlock = ({differentName, differentValue, img}: IDifferentBrand<string>) => {
   return (
     <div className={styles.BrandBlock}>
       <div className={styles.text}>
@@ -14,3 +13,4 @@ export const BrandBlock = ({differentName, differentValue, img}: IDifferentBrand
     </div>
   );
 };
+export default BrandBlock

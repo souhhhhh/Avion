@@ -1,13 +1,11 @@
 import { FC } from 'react';
-import { useQuery } from 'react-query';
-import classNames from 'classnames';
-
-import { BrandBlock } from '../../../entities/BrandBlock';
+import BrandBlock from '../../../entities/brandBlock/ui/BrandBlock';
 import { BrandService } from '../../../entities/Services/BrandService';
-import { Loader } from '../../../shared/ui/Loader';
-import { IDifferentBrand } from '../../../shared/lib/types/data';
+import { Loader } from '../../../shared/ui/Loader/ui/Loader';
 import styles from './Brand.module.scss';
-
+import classNames from 'classnames';
+import { useQuery } from 'react-query';
+import { IDifferentBrand } from '../../../shared/lib/types/data';
 export const Brand: FC = () => {
 	const { data } = useQuery<IDifferentBrand<string>[]>({
 		queryKey: ['different'],

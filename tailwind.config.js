@@ -4,13 +4,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
-      
       colors: { 
         'purple-light': '#2A254B',
         'purple-dark': '#12131A',
-        'blue-light': '#505977'
+        'blue-light': '#505977',
+        'gray-light': '#EBE8F4',
       },
-      
       fontFamily: { 
         Satoshi: ['Satoshi'],
         ClashDisplay: ['ClashDisplay'],

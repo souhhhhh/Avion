@@ -8,27 +8,22 @@ import { ButtonTheme } from '../../../shared/ui/Button/ui/Button';
 import { cartStore } from '../../../store/cartStore/cart-store';
 import { getCard } from '../api/get-card';
 
-export const CardItem = observer(() => {
-	const [product, setProduct] = useState<IProduct | null>();
-	const { id } = useParams() as { id: string };
+
 
 	export const FullItemData = observer(() => {
-	const { addToCartItems } = mobxStore;
-	const { id } = useParams();
-	const [fullItemData, setFullItemData] = useState<IProduct | null>();
-
-	const getData = async () => {
-		const response = await axios.get(`http://localhost:3000/AllData/${id}`);
-		setFullItemData(response.data);
-	};
 	
-	useEffect(() => {
-		getData();
-	}, [id]);
+	const [product, setProduct] = useState<IProduct | null>();
+	const { id } = useParams();
 
 	const { addToCartItems } = cartStore;
 
-	useEffect(() => { getCard(id).then(product => setProduct(product)) }, [id]);
+	const getData = async () => {
+		if (!id) return
+		const data = await getCard(id)
+		setProduct(data)
+	  } 
+
+	useEffect(() => {getData()}, []);
 
 	return product && (
 		<div className='text-green-500 flex justify-center mt-10 font-Satoshi'>
@@ -89,13 +84,6 @@ export const CardItem = observer(() => {
 							<Button
 								theme={ButtonTheme.PURPLE}
 								onClick={() => addToCartItems(product)}
-								onClick={() => 
-									addToCartItems({
-										id: fullItemData.id,
-										quantity: 1,
-										items: fullItemData
-									})
-								}
 							>
 								Add to cart
 							</Button>
@@ -106,4 +94,4 @@ export const CardItem = observer(() => {
 			</div>
 		</div>
 	);
-})}
+})

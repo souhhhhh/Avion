@@ -1,1 +1,1 @@
-export { CardItem } from "./ui/CardItem";
+export {FullItemData} from './ui/FullItemData'

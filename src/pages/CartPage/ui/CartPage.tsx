@@ -1,12 +1,14 @@
 import { observer } from 'mobx-react';
 
 import { ProductListTitle } from '../../../widgets/ProductListTitle';
-import { mobxStore } from '../../../store/cartStore/cart-store';
+import styles from './CartPage.module.scss'
 import { CartItem } from '../../../entities/CartItem';
+import { cartStore } from '../../../store/cartStore/cart-store';
+
 
 export const CartPage = observer(() => {
-	const { items } = mobxStore;
-	console.log(items)
+	const { cart } = cartStore;
+	console.log(cart)
 	return (
 		<div className='container'>
 			<div>
@@ -19,13 +21,12 @@ export const CartPage = observer(() => {
 					</ul>
 					<div>
 						{/* TODO: display a cart item */}
-						{cart.map(item => <div key={item.id}></div>)}
+						{cart.map(item => <div key={item.id}>
+							<CartItem item={item} />
+						</div>)}
 					</div>
-					{items?.map((cartItems) => ( 
-						<CartItem item={cartItems.items} key={cartItems.id} />
-					))}
 				</div>
 			</div>
 		</div>
 	);
-})}
+})

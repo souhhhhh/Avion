@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { observer } from 'mobx-react';
 
-<<<<<<< HEAD:src/entities/CardItem/ui/CardItem.tsx
 import { Button } from '../../../shared/ui/Button';
 import { Dimensions, IProduct } from '../../../shared/lib/types/data';
 import { ButtonTheme } from '../../../shared/ui/Button/ui/Button';
@@ -12,8 +11,8 @@ import { getCard } from '../api/get-card';
 export const CardItem = observer(() => {
 	const [product, setProduct] = useState<IProduct | null>();
 	const { id } = useParams() as { id: string };
-=======
-export const FullItemData = observer(() => {
+
+	export const FullItemData = observer(() => {
 	const { addToCartItems } = mobxStore;
 	const { id } = useParams();
 	const [fullItemData, setFullItemData] = useState<IProduct | null>();
@@ -26,7 +25,6 @@ export const FullItemData = observer(() => {
 	useEffect(() => {
 		getData();
 	}, [id]);
->>>>>>> efee39a5988b47dc7cba3772dbaa4a1d4e72c4cd:src/entities/FullItemData/ui/FullItemData.tsx
 
 	const { addToCartItems } = cartStore;
 
@@ -90,9 +88,7 @@ export const FullItemData = observer(() => {
 						<div className='mt-10 flex gap-10'>
 							<Button
 								theme={ButtonTheme.PURPLE}
-<<<<<<< HEAD:src/entities/CardItem/ui/CardItem.tsx
 								onClick={() => addToCartItems(product)}
-=======
 								onClick={() => 
 									addToCartItems({
 										id: fullItemData.id,
@@ -100,7 +96,6 @@ export const FullItemData = observer(() => {
 										items: fullItemData
 									})
 								}
->>>>>>> efee39a5988b47dc7cba3772dbaa4a1d4e72c4cd:src/entities/FullItemData/ui/FullItemData.tsx
 							>
 								Add to cart
 							</Button>
@@ -111,4 +106,4 @@ export const FullItemData = observer(() => {
 			</div>
 		</div>
 	);
-});
+})}

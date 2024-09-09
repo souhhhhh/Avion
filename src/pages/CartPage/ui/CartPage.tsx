@@ -1,13 +1,6 @@
 import { observer } from 'mobx-react';
 
 import { ProductListTitle } from '../../../widgets/ProductListTitle';
-import { cartStore } from '../../../store/cartStore/cart-store';
-import styles from './CartPage.module.scss'
-
-export const CartPage = observer(() => {
-	// cart store also including a special function for remove product from cart.
-	const { cart } = cartStore;
-
 import { mobxStore } from '../../../store/cartStore/cart-store';
 import { CartItem } from '../../../entities/CartItem';
 

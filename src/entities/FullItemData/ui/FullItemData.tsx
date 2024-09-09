@@ -8,15 +8,16 @@ import { observer } from 'mobx-react';
 import { mobxStore } from '../../../store/cartStore/cart-store';
 
 export const FullItemData = observer(() => {
-	const { addToCartItems, cartstore } = mobxStore;
+	const { addToCartItems } = mobxStore;
 	const { id } = useParams();
 	const [fullItemData, setFullItemData] = useState<IProduct | null>();
 
+	const getData = async () => {
+		const response = await axios.get(`http://localhost:3000/AllData/${id}`);
+		setFullItemData(response.data);
+	};
+	
 	useEffect(() => {
-		const getData = async () => {
-			const response = await axios.get(`http://localhost:3000/AllData/${id}`);
-			setFullItemData(response.data);
-		};
 		getData();
 	}, [id]);
 
@@ -78,9 +79,13 @@ export const FullItemData = observer(() => {
 						<div className='mt-10 flex gap-10'>
 							<Button
 								theme={ButtonTheme.PURPLE}
-								onClick={() => (
-									addToCartItems(fullItemData), console.log(cartstore.items)
-								)}
+								onClick={() => 
+									addToCartItems({
+										id: fullItemData.id,
+										quantity: 1,
+										items: fullItemData
+									})
+								}
 							>
 								Add to cart
 							</Button>

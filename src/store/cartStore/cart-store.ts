@@ -1,5 +1,4 @@
 import { makeAutoObservable } from 'mobx';
-import { IProduct } from '../../shared/lib/types/data';
 import { ICartStore } from './cart-store.types';
 
 class MobxStore {
@@ -7,19 +6,18 @@ class MobxStore {
 		makeAutoObservable(this);
 	}
 
-	cartstore = {
-		items: [] as ICartStore[]
-	};
+	items = [] as ICartStore[]
 
-	addToCartItems = (items: IProduct) => {
-		this.cartstore.items.push({
-			...items,
-			items,
-			quantity: 1
-		});
-	};
+	
+	
+	
+	
+	
+	addToCartItems(item: ICartStore) {this.items.push({ ...item, id: item.id });
+	}
+
 	removeItem(itemId: string) {
-		this.cartstore.items = this.cartstore.items.filter(
+		this.items = this.items.filter(
 			item => item.id !== itemId
 		);
 	}

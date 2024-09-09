@@ -1,5 +1,5 @@
 
-import{ ReactNode } from 'react';
+import{ ButtonHTMLAttributes, FC, ReactNode } from 'react';
 
 import styles from './Button.module.scss';
 import classNames from 'classnames';
@@ -10,13 +10,14 @@ export enum ButtonTheme {
   WHITE = 'white',
   TransitionGray = 'transitionGray'
 }
-interface ButtonProps {
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   theme: ButtonTheme;
   children: ReactNode;
   className?: string;
 }
-export const Button = ({ className, children, theme, ...otherProps }: ButtonProps) => {
+export const Button: FC<ButtonProps> = ({ className, children, theme, ...props }: ButtonProps) => {
   return (
-    <button className={classNames(styles.Button, { [styles[theme]]: true })} {...otherProps}>{children}</button>
+    <button className={classNames(styles.Button, { [styles[theme]]: true })} {...props} >{children}</button>
   );
 };

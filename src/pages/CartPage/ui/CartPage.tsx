@@ -1,9 +1,11 @@
 import { observer } from 'mobx-react';
 import { ProductListTitle } from '../../../widgets/ProductListTitle';
 import { mobxStore } from '../../../store/cartStore/cart-store';
+import { CartItem } from '../../../entities/CartItem';
 
 export const CartPage = observer(() => {
-	const { cartstore } = mobxStore;
+	const { items } = mobxStore;
+	console.log(items)
 	return (
 		<div className='container'>
 			<div className=''>
@@ -16,7 +18,9 @@ export const CartPage = observer(() => {
 							<p>Total</p>
 						</div>
 					</div>
-					<p></p>
+					{items?.map((cartItems) => ( 
+						<CartItem item={cartItems.items} key={cartItems.id} />
+					))}
 				</div>
 			</div>
 		</div>

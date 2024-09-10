@@ -8,7 +8,6 @@ import { cartStore } from '../../../store/cartStore/cart-store';
 
 export const CartPage = observer(() => {
 	const { cart } = cartStore;
-	console.log(cart)
 	return (
 		<div className='container'>
 			<div>

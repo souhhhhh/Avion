@@ -1,58 +1,62 @@
-import { useParams } from 'react-router-dom';
-import { Dimensions, IProduct, Plus } from '../../../shared/lib/types/data';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Button } from '../../../shared/ui/Button';
-import { ButtonTheme } from '../../../shared/ui/Button/ui/Button';
+import { useParams } from 'react-router-dom';
 import { observer } from 'mobx-react';
-import { mobxStore } from '../../../store/cartStore/cart-store';
 
-export const FullItemData = observer(() => {
-	const { addToCartItems } = mobxStore;
+import { Button } from '../../../shared/ui/Button';
+import { Dimensions, IProduct } from '../../../shared/lib/types/data';
+import { ButtonTheme } from '../../../shared/ui/Button/ui/Button';
+import { cartStore } from '../../../store/cartStore/cart-store';
+import { getCard } from '../api/get-card';
+
+
+
+	export const FullItemData = observer(() => {
+	
+	const [product, setProduct] = useState<IProduct | null>();
 	const { id } = useParams();
-	const [fullItemData, setFullItemData] = useState<IProduct | null>();
+
+	const { addToCartItems } = cartStore;
 
 	const getData = async () => {
-		const response = await axios.get(`http://localhost:3000/AllData/${id}`);
-		setFullItemData(response.data);
-	};
-	
-	useEffect(() => {
-		getData();
-	}, [id]);
+		if (!id) return
+		const data = await getCard(id)
+		setProduct(data)
+	  } 
 
-	return !fullItemData ? null : (
+	useEffect(() => {getData()}, []);
+
+	return product && (
 		<div className='text-green-500 flex justify-center mt-10 font-Satoshi'>
 			<div className='flex  mt-10'>
-				<img src={fullItemData.bigImg} alt='' />
+				<img src={product.bigImg} alt='' />
 				<div className='p-10  ml-16 mt-14'>
 					<p className='font-normal text-4xl text-purple-light pr-[281px] font-ClashDisplay'>
-						{fullItemData.title}
+						{product.title}
 					</p>
 					<p className='font-normal text-3xl text-purple-dark mt-5'>
-						£{fullItemData.price}
+						£{product.price}
 					</p>
 					<div>
 						<p className='text-dasda font-normal text-xl mt-16 mb-10 font-ClashDisplay text-purple-light'>
 							Description
 						</p>
 						<p className='w-[491px] h-[59px] text-blue-light'>
-							{fullItemData.description}
+							{product.description}
 						</p>
 					</div>
 					<div>
-						{fullItemData.plus.map((item: Plus) => (
+						{product.plus.map(plus => (
 							<ul
 								className='mt-10 font-Satoshi text-mg text-blue-light pl-5'
-								key={item.material}
+								key={plus.material}
 							>
-								<li className='list-disc'>{item.material}</li>
-								<li className='list-disc'>{item.handmadeUpholstery}</li>
-								<li className='list-disc'>{item.conclusion}</li>
+								<li className='list-disc'>{plus.material}</li>
+								<li className='list-disc'>{plus.handmadeUpholstery}</li>
+								<li className='list-disc'>{plus.conclusion}</li>
 							</ul>
 						))}
 
-						{fullItemData.dimensions.map((item: Dimensions) => (
+						{product.dimensions.map((item: Dimensions) => (
 							<div key={item.Height}>
 								<p className='mt-10 font-ClashDisplay font-normal text-xl text-purple-light'>
 									Dimensions
@@ -79,13 +83,7 @@ export const FullItemData = observer(() => {
 						<div className='mt-10 flex gap-10'>
 							<Button
 								theme={ButtonTheme.PURPLE}
-								onClick={() => 
-									addToCartItems({
-										id: fullItemData.id,
-										quantity: 1,
-										items: fullItemData
-									})
-								}
+								onClick={() => addToCartItems(product)}
 							>
 								Add to cart
 							</Button>
@@ -96,4 +94,4 @@ export const FullItemData = observer(() => {
 			</div>
 		</div>
 	);
-});
+})

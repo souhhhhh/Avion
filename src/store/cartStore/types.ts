@@ -1,5 +1,6 @@
 import { IProduct } from '../../shared/lib/types/data';
 
-type TQuantity = { quantity: number };
 
-export interface ICart extends IProduct, TQuantity {}
+export interface ICart extends IProduct {
+    quantity: number
+}

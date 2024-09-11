@@ -23,7 +23,7 @@ import { getCard } from '../api/get-card';
 		setProduct(data)
 	  } 
 
-	useEffect(() => {getData()}, []);
+	useEffect(() => {getData()}, [id]);
 
 	return product && (
 		<div className='text-green-500 flex justify-center mt-10 font-Satoshi'>

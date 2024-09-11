@@ -2,17 +2,20 @@ import { RouteProps } from 'react-router-dom';
 import { MainPage } from '../../../pages/MainPage';
 import { ProductPage } from '../../../pages/ProductPage';
 import { CartPage } from '../../../pages/CartPage';
+import { ProfilePage } from '../../../pages/ProfilePage';
 
 export enum AppRoutes {
   MAIN = 'main',
   PRODUCT_PAGE = 'productPage',
-  CART_PAGE = 'cartPage'
+  CART_PAGE = 'cartPage',
+  PROFILE_PAGE = 'profilePage',
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.PRODUCT_PAGE]: 'product/:id',
-  [AppRoutes.CART_PAGE]: 'cart'
+  [AppRoutes.CART_PAGE]: 'cart',
+  [AppRoutes.PROFILE_PAGE]: 'profile'
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -27,5 +30,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.CART_PAGE]:  {
     path: RoutePaths.cartPage,
     element: <CartPage />
+  },
+  [AppRoutes.PROFILE_PAGE]: { 
+    path: RoutePaths.profilePage,
+    element: <ProfilePage />
   }
 };

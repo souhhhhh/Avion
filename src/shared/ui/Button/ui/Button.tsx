@@ -8,7 +8,8 @@ export const enum ButtonTheme {
 	GREY = 'grey',
 	PURPLE = 'purple',
 	WHITE = 'white',
-	TransitionGray = 'transitionGray'
+	TransitionGray = 'transitionGray',
+	DELETE = 'delete'
 }
 interface ButtonProps {
 	theme: ButtonTheme;
@@ -23,7 +24,7 @@ export const Button = ({
 }: PropsWithChildren<ButtonProps> & ButtonHTMLAttributes<HTMLButtonElement>) => {
 	return (
 		<button
-			className={classNames(styles.Button, { [styles[theme]]: true })}
+			className={classNames(styles.Button, { [styles[theme]]: true }, [className])}
 			{...otherProps}
 		>
 			{children}

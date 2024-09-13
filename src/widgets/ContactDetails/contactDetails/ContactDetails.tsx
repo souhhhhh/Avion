@@ -1,37 +1,33 @@
-import { FC } from "react"
-import cn from 'classnames'
+import { FC } from 'react';
+import cn from 'classnames';
 
-import { InputProfile } from "../../../shared/ui/InputProfile"
-import { InputProfileTheme } from "../../../shared/ui/InputProfile/ui/InputProfile"
+import { ProductListTitle } from '../../ProductListTitle';
+import { InputFieldsData } from '../../../shared/ui/InpurtFieldsData/InputFieldsData';
 
-import { ProductListTitle } from "../../ProductListTitle"
+const fields: IFields[] = [
+	{ label: 'First Name', placeholder: 'First Name' },
+	{ label: 'Last Name', placeholder: 'Last Name' },
+	{ label: 'Phone number', placeholder: 'Phone number' }
+];
 
 export const ContactDetails: FC<IContactDetails> = ({ className }) => {
+	return (
+		<div className={cn('border border-[#f4f4f4] rounded-md', [className])}>
+			<ProductListTitle title='Your profile' className='mt-5 ml-10' />
+			<div className='grid grid-cols-2 gap-10'>
+				{fields.map(item => (
+					<InputFieldsData placeholder={item.placeholder} label={item.label} />
+				))}
+			</div>
+		</div>
+	);
+};
 
-    return (
-        <div className={cn("border border-[#f4f4f4] rounded-md", [className])}>
-        <ProductListTitle title="Your profile" className="mt-5 ml-10" />
-        <div className="grid grid-cols-2 gap-10">
-
-            <div className="flex flex-col ml-10">
-                <p className="text-lg text-purple-light font-ClashDisplay ml-2">First Name</p>
-                <InputProfile theme={InputProfileTheme.DEFAULT} placeholder="First Name" className="mt-3"></InputProfile>
-            </div>
-
-            <div className="flex flex-col ml-40">
-                <p className="text-lg text-purple-light font-ClashDisplay ml-2">Last Name</p>
-                <InputProfile theme={InputProfileTheme.DEFAULT} placeholder="First Name" className="mt-3"></InputProfile>
-            </div>
-
-            <div className="flex flex-col ml-10">
-                <p className="text-lg text-purple-light font-ClashDisplay ml-2">Phone number</p>
-                <InputProfile theme={InputProfileTheme.DEFAULT} placeholder="First Name" className="mt-3"></InputProfile>
-            </div>
-        </div>
-    </div>
-  )
+interface IContactDetails {
+	className?: string;
 }
 
-interface IContactDetails { 
-    className?: string
+interface IFields {
+	label: string;
+	placeholder: string;
 }

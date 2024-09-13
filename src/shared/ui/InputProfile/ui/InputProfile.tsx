@@ -31,6 +31,6 @@ export const InputProfile: FC<IInputProfile> = (props) => {
 interface IInputProfile {
     theme: InputProfileTheme 
     className?: string
-    children: ReactNode
+    children?: ReactNode
     placeholder:string
 }

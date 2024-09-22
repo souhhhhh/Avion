@@ -9,7 +9,8 @@ export const enum ButtonTheme {
 	PURPLE = 'purple',
 	WHITE = 'white',
 	TransitionGray = 'transitionGray',
-	DELETE = 'delete'
+	DELETE = 'delete',
+	PROFILE_BUTTON = 'profile_button'
 }
 interface ButtonProps {
 	theme: ButtonTheme;

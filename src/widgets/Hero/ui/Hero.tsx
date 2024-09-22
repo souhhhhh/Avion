@@ -1,8 +1,9 @@
+import { observer } from 'mobx-react';
 import { Button } from '../../../shared/ui/Button';
 import { ButtonTheme } from '../../../shared/ui/Button/ui/Button';
 import chair from '../assets/Right Image.png';
 import styles from './Hero.module.scss';
-export const Hero = () => {
+export const Hero = observer(() => {
   return (
     <div className="container">
       <div className={styles.hero}>
@@ -28,4 +29,4 @@ export const Hero = () => {
       </div>
     </div>
   );
-};
+});

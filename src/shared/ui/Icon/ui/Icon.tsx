@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Icon.module.scss';
 import classNames from 'classnames';
 import { AppLink } from '../../AppLink';
@@ -15,7 +14,7 @@ export const Icon = (props: IconProps) => {
   if (link) {
     return (
       <AppLink to={typeof path === 'string' ? path : '/'}>
-        <img {...otherProps} src={svg} className={classNames(styles.Icon)} />
+        <img {...otherProps} src={svg} className={classNames(styles.Icon, [className])} />
       </AppLink>
     );
   }

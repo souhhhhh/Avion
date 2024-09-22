@@ -1,4 +1,4 @@
-import { Profile } from "../../../features/Search/Profile"
+import { Profile } from "../../../features/Profile"
 
 export const ProfilePage = () => {
   return (

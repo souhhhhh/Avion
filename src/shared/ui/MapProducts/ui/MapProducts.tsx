@@ -5,13 +5,14 @@ import type { IProduct, IDifferentBrand } from '../../../lib/types/data';
 import { Loader } from '../../Loader';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { observer } from 'mobx-react';
 
 interface IMapPorudcts { 
 	data: IProduct[] | IDifferentBrand<string>[], 
 	children: ReactNode
 }
 
-export const MapProducts: FC<IMapPorudcts> = ({ data, children }) => {
+export const MapProducts: FC<IMapPorudcts> = observer(({ data, children }) => {
 	const { id } = useParams()
   // Удаляем элемент с id из массива data
   const filteredData = data.filter(item => item.id !== id);
@@ -33,4 +34,4 @@ export const MapProducts: FC<IMapPorudcts> = ({ data, children }) => {
       )}
     </div>
 	);
-};
+});

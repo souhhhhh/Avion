@@ -3,6 +3,7 @@
   font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
+  z-index: 5;
 }
 
 .transitionGray { 
@@ -50,4 +51,21 @@
   &:hover {
     background: #EBE8F4;
   }
+}
+
+.profile_button { 
+  transition: all 0.7s ease-out;
+  width: 158px;
+  border-radius: 12px;
+  padding: 0;
+  height: 65px;
+  border: 1px solid #dbdbdb;
+  &:hover {
+    background: rgb(216, 214, 219);
+  }
+  &:focus { 
+    background: #dbdbdb;
+  }
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
 }

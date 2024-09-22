@@ -1,1 +1,1 @@
-export { MainProducts } from "./ui/MapProducts";
+export { MapProducts } from "./ui/MapProducts";

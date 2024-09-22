@@ -1,12 +1,11 @@
 import { FC, useState } from "react"
 import { IProduct } from "../../../shared/lib/types/data"
 
-import { BrandService } from "../../Services/BrandService";
 import cn from 'classnames'
 import { Link } from "react-router-dom";
-import { cartStore } from "../../../store/cartStore/cart-store";
 import { Button } from "../../../shared/ui/Button";
 import { ButtonTheme } from "../../../shared/ui/Button/ui/Button";
+import { cartStore } from "../../../shared/store/cartStore/cart-store";
 
 export interface ICartItem extends IProduct {}
 
